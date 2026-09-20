@@ -25,8 +25,8 @@ targets:
     workspace:
       host: https://adb-7405611074894560.0.azuredatabricks.net
     variables:
-      catalog: dtbrsmartd01
-      schema: dev
+      catalog: bakehouse_analytics_dev
+      schema: rnd
   prod:
     mode: production
     workspace:
@@ -34,8 +34,8 @@ targets:
       # We explicitly deploy to /Workspace/Users/rommel.rodriguez07@outlook.com to make sure we only have a single copy.
       root_path: /Workspace/Users/rommel.rodriguez07@outlook.com/.bundle/${bundle.name}/${bundle.target}
     variables:
-      catalog: dtbrsmartd01
-      schema: prod
+      catalog: bakehouse_analytics_prod
+      schema: rnd
     permissions:
       - user_name: rommel.rodriguez07@outlook.com
         level: CAN_MANAGE
