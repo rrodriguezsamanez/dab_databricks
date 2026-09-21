@@ -1,0 +1,6 @@
+resources:
+  dashboards:
+    bakehouse_overview:
+      display_name: "bakehouse_overview"
+      warehouse_id: ${var.warehouse_id}
+      file_path: ../src/bakehouse_overview.lvdash.json
