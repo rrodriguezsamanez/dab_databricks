@@ -10,6 +10,7 @@ on:
       - main
     paths:
       - "bakehouse_analytics/**"
+      - ".github/workflows/prod_deployment.yml"
 
 jobs:
   deploy:
