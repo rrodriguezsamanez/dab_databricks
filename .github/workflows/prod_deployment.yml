@@ -26,6 +26,11 @@ jobs:
 
       - uses: databricks/setup-cli@main
 
+      - name: Apuntar el dashboard a prod
+        run: |
+          sed -i 's/bakehouse_analytics_dev\./bakehouse_analytics_prod./g' src/bakehouse_overview.lvdash.json
+          grep -q "bakehouse_analytics_prod\." src/bakehouse_overview.lvdash.json || { echo "No se reemplazó nada"; exit 1; }
+
       - name: Validar bundle
         run: databricks bundle validate
 
